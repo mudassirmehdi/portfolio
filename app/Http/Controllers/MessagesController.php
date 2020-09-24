@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller; 
+use App\Http\Controllers\Controller;  
 use App\Message;
 use Session;
 use Validator;
+use Mail;
 
 class MessagesController extends Controller
 {
@@ -18,8 +19,7 @@ class MessagesController extends Controller
     public function index()
     {
         $messages = Message::orderBy('id', 'desc')->paginate(12);
-        $unread = Message::where('seen', '0')->get();
-        return view('backend.pages.messages.index', compact('messages', 'unread'));
+        return view('backend.pages.messages.index', compact('messages'));
     }
 
     /**
@@ -57,7 +57,18 @@ class MessagesController extends Controller
         $messages->subject = $request->subject;
         $messages->message = $request->message;
         $messages->save();
+        
+        $data = array(
+                'name' => $request->name, 
+                'email' => $request->email, 
+                'phone' => $request->phone, 
+                'subject' => $request->subject, 
+                'bodyMessage' => $request->message
+             );
+        
         if ($messages->save()) {
+
+            
             Session::flash('message', 'Message send Successfully....');
            return redirect()->back();
         }
@@ -118,5 +129,5 @@ class MessagesController extends Controller
                 Session::flash('message', 'Message deleted Successfully');
                return redirect()->back();
             }
-    }
+    } 
 }

@@ -6,6 +6,7 @@ use App\User;
 use App\Achievement;
 use App\Teacher;
 use App\Post;
+use App\Message;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver;
@@ -68,7 +69,8 @@ class PagesController extends Controller
 
     public function dashboard()
     {
-        return view('backend.pages.dashboard.index');
+        $unread = Message::where('seen', '0')->get();
+        return view('backend.pages.dashboard.index', compact('unread'));
     }
   
 

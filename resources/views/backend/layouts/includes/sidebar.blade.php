@@ -2,7 +2,7 @@
 <aside class="main-sidebar fixed offcanvas shadow" data-toggle='offcanvas'>
     <section class="sidebar">
         <div class=" mt-3 mb-3 ml-3">
-             <img src="{{ asset('frontend/images/logo.png') }}" height="60">
+             <a href="{{ url('/') }}" target="_blank"><img src="{{ asset('frontend/images/logo.png') }}" height="60"></a>
         </div>
         <div class="relative">
             <a data-toggle="collapse" href="#userSettingsCollapse" role="button" aria-expanded="false"
@@ -15,7 +15,7 @@
                         @if(!empty(Auth::user()->profile_image))
                             <img src="/uploads/profiles/{{ Auth::user()->profile_image }}" class="user_avatar" width="100" style="width: 60px; height: 60px;">
                             @else
-                                <img src="https://keeleandfinchdentaloffice.com/wp-content/uploads/2016/10/orionthemes-placeholder-image-750x750.jpg" class="user_avatar" width="100" style="width: 60px; height: 60px;">    
+                                <img src="https://st4.depositphotos.com/1156795/20814/v/450/depositphotos_208142514-stock-illustration-profile-placeholder-image-gray-silhouette.jpg" class="user_avatar" width="100" style="width: 60px; height: 60px;">    
                             @endif 
                     </div>
                     <div class="float-left info">
@@ -77,8 +77,7 @@
 
              <li class="treeview no-b"><a href="{{ url('admin/messages') }}">
                 <i class="icon icon-package light-green-text s-18"></i>
-                <span>Messages</span>
-                @stack('unreadMessage');
+                <span>Messages</span> 
             </a> 
             </li>
 
@@ -86,7 +85,7 @@
             <li class="treeview"><a href="#">
                 <i class="icon icon-sailing-boat-water purple-text s-18"></i> 
                 <span>Admission</span>
-                <span class="badge r-3 badge-success pull-right">20</span>
+                <!-- <span class="badge r-3 badge-success pull-right">20</span> -->
                 
             </a> 
             </li> 

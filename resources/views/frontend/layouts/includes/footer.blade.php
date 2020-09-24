@@ -76,3 +76,19 @@
   <script src="{{ asset('frontend/js/scrollax.min.js') }}"></script>
   
   <script src="{{ asset('frontend/js/main.js') }}"></script>
+  
+
+<script type="text/javascript">
+   function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script>

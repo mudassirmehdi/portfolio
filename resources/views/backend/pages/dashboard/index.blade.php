@@ -1,12 +1,12 @@
   @extends('backend.layouts.master')
 
   @section('content')  
+
 <!-- Side bar --> 
 <div id="app">
   @include('backend.layouts.includes.sidebar')
 <!--Sidebar End-->
   @include('backend.layouts.includes.navbar')
-
 
 
 
@@ -47,11 +47,11 @@
                                 <div class="float-right">
                                     <span class="icon icon-note-list text-light-blue s-48"></span>
                                 </div>
-                                <div class="counter-title">Web Projects</div>
+                                <div class="counter-title">Admission Request</div>
                                 <h5 class="sc-counter mt-3">1228</h5>
                             </div>
                             <div class="progress progress-xs r-0">
-                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25"
                                      aria-valuemin="0" aria-valuemax="128"></div>
                             </div>
                         </div>
@@ -62,11 +62,11 @@
                                 <div class="float-right">
                                     <span class="icon icon-mail-envelope-open s-48"></span>
                                 </div>
-                                <div class="counter-title ">Premium Themes</div>
+                                <div class="counter-title ">New Messages</div>
                                 <h5 class="sc-counter mt-3">1228</h5>
                             </div>
                             <div class="progress progress-xs r-0">
-                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25"
+                                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25"
                                      aria-valuemin="0" aria-valuemax="128"></div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                                 <h5 class="sc-counter mt-3">1228</h5>
                             </div>
                             <div class="progress progress-xs r-0">
-                                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25"
+                                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25"
                                      aria-valuemin="0" aria-valuemax="128"></div>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                                 <h5 class="sc-counter mt-3">550</h5>
                             </div>
                             <div class="progress progress-xs r-0">
-                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25"
                                      aria-valuemin="0" aria-valuemax="128"></div>
                             </div>
                         </div>

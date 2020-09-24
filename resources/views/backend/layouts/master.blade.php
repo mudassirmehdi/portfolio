@@ -3,6 +3,9 @@
 
 <body class="light">
 
+	
+
+
   @yield('content')
 
 

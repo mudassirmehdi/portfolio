@@ -19,7 +19,7 @@
                 @if(!empty(Auth::user()->profile_image))
                             <img src="/uploads/profiles/{{ Auth::user()->profile_image }}" class="user-image">
                             @else
-                                <img src="https://keeleandfinchdentaloffice.com/wp-content/uploads/2016/10/orionthemes-placeholder-image-750x750.jpg" class="user-image">    
+                                <img src="https://st4.depositphotos.com/1156795/20814/v/450/depositphotos_208142514-stock-illustration-profile-placeholder-image-gray-silhouette.jpg" class="user-image">    
                             @endif  
                 
             </a>

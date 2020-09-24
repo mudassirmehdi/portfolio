@@ -2,16 +2,7 @@
 
   @section('content')  
 
-  <!-- GetMessge Count iN sidebar --> 
-    @push('unreadMessage')
-          @php($counter = 1 ) 
-          @foreach( $unread as $unread1 )
-            <span class="badge r-3 badge-success pull-right">{{ $counter++ }}</span>
-          @endforeach 
-    @endpush
-                
-  <!-- GetMessge Count iN sidebar -->
-
+  
 <!-- Side bar --> 
 <div id="app">
   @include('backend.layouts.includes.sidebar')
